@@ -37,14 +37,14 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 10px;
+   position: sticky;
+   top: 0;
 }
 
 header .header_container {
    width: 100%;
    height: 50px;
-   background: #f8f8f8;
-   border-radius: 10px;
+   background: #ececec;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -55,7 +55,7 @@ header .header_container a {
    text-decoration: none;
    color: var(--dark_blue);
    font-weight: 600;
-   font-size: 16px;
+   font-size: 18px;
    transition: .3s;
 }
 
@@ -330,55 +330,90 @@ dialog .box button {
 
 @keyframes fadeIn {
    from {
-     opacity: 0;
+      opacity: 0;
    }
- 
+
    to {
-     opacity: 1;
+      opacity: 1;
    }
 }
 
 @keyframes shake {
-   0% { transform: translateX(0); }
-   10% { transform: translateX(-5px) rotate(-1deg); }
-   20% { transform: translateX(5px) rotate(1deg); }
-   30% { transform: translateX(-5px) rotate(-1deg); }
-   40% { transform: translateX(5px) rotate(1deg); }
-   50% { transform: translateX(-5px) rotate(-1deg); }
-   60% { transform: translateX(5px) rotate(1deg); }
-   70% { transform: translateX(-5px) rotate(-1deg); }
-   80% { transform: translateX(5px) rotate(1deg); }
-   90% { transform: translateX(-5px) rotate(-1deg); }
-   100% { transform: translateX(0); }
+   0% {
+      transform: translateX(0);
+   }
+
+   10% {
+      transform: translateX(-5px) rotate(-1deg);
+   }
+
+   20% {
+      transform: translateX(5px) rotate(1deg);
+   }
+
+   30% {
+      transform: translateX(-5px) rotate(-1deg);
+   }
+
+   40% {
+      transform: translateX(5px) rotate(1deg);
+   }
+
+   50% {
+      transform: translateX(-5px) rotate(-1deg);
+   }
+
+   60% {
+      transform: translateX(5px) rotate(1deg);
+   }
+
+   70% {
+      transform: translateX(-5px) rotate(-1deg);
+   }
+
+   80% {
+      transform: translateX(5px) rotate(1deg);
+   }
+
+   90% {
+      transform: translateX(-5px) rotate(-1deg);
+   }
+
+   100% {
+      transform: translateX(0);
+   }
 }
 
 .tremer {
    animation: shake 0.5s;
-   animation-fill-mode: forwards; /* Mantém o estado final da animação */
+   animation-fill-mode: forwards;
+   /* Mantém o estado final da animação */
 }
- 
+
 /* media queries */
 
 @media screen and (max-width: 1310px) {
-   
+
    /* body */
 
    body {
       row-gap: 100px;
       animation: fadeIn 1s ease-out;
    }
-   
-   
-   /* header */
 
+
+   /* header */
    header .header_container {
       column-gap: 20px;
+      height: 40px;
+      font-size: 14px;
+
    }
-   
+
    header .header_container a {
       font-size: 14px;
    }
-   
+
    /* main */
 
    main h2 {
@@ -390,7 +425,7 @@ dialog .box button {
       font-size: 14px;
       line-height: 25px;
    }
-   
+
    /* how it works */
 
    .how_it_work h2 {
@@ -410,7 +445,7 @@ dialog .box button {
       font-size: 14px;
       line-height: 20px;
    }
-   
+
    /* iframe section */
 
    .iframe_section img {
@@ -448,7 +483,7 @@ dialog .box button {
 }
 
 @media screen and (max-width: 910px) {
-   
+
    /* how it works */
 
    .how_it_work .work_container {
@@ -464,33 +499,34 @@ dialog .box button {
       font-size: 12px;
       line-height: 20px;
    }
-   
+
    /* modal */
-   
+
    .modal button {
       position: fixed;
-      top: 40px;
-      left: 40px;
+      font-size: 10px;
+      top: 20px;
+      left: 20px;
       right: unset;
    }
-   
+
 }
 
 @media screen and (max-width: 610px) {
 
-   
+
    /* main */
-   
+
    main {
       padding: 0px 20px;
    }
-   
+
    /* how it works */
 
    .how_it_work {
       padding: 0px 20px;
    }
-   
+
    .how_it_work .work_container {
       width: 100%;
       display: flex;
@@ -502,7 +538,7 @@ dialog .box button {
    .how_it_work .work_container .work_item {
       width: 300px;
    }
-      
+
    .how_it_work .work_container .work_item img {
       width: 90px;
    }
@@ -511,21 +547,21 @@ dialog .box button {
       font-size: 12px;
       line-height: 20px;
    }
-   
+
    /* iframe section */
 
    .iframe_section img {
       width: 290px;
    }
-   
+
    /* sponsor */
-   
+
    .sponsor {
       padding: 0px 20px;
    }
-   
+
    /* footer */
-   
+
    footer {
       height: 80px;
       padding: 0px 20px;
